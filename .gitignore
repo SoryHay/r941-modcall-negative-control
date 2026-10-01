@@ -1,0 +1,9 @@
+*.bam
+*.bai
+*.fast5
+*.pod5
+*.tsv.gz
+__pycache__/
+.ipynb_checkpoints/
+results_local/
+figures/output/

@@ -1,0 +1,6 @@
+feature	mean_failing	mean_passing	above_median_failing	above_median_passing	p
+longest_homopolymer_run	2.00	1.85	0.267	0.142	0.0763
+A_count	2.10	1.99	0.333	0.252	0.3423
+A_count_flanks	1.10	0.99	0.333	0.252	0.3423
+GC_count	2.07	1.99	0.233	0.323	0.3194
+purine_count	3.37	2.95	0.467	0.292	0.0525

@@ -1,0 +1,21 @@
+# Parameters of the article. Every script reads them from here; none is repeated in code.
+
+requirement:            # equation (1): FPR_max = alpha * p * S / ((1 - alpha) * (1 - p))
+  alpha: 0.05
+  sensitivity: 1.0      # S = 1, the most permissive assumption (Methods, Statistics)
+  sig_digits: 4         # FPR_max carried at 4 significant digits, as tabulated (Table 1)
+  prevalence:
+    CpG: 0.7
+    CpH: 0.007
+    A: 4.3e-4           # mitochondrial 6mA, Hao et al. 2020
+
+read_end_exclusion_bp: 250      # positions closer than this to a read end are dropped
+min_obs_per_context: 200        # contexts with fewer observations are reported as NA
+thresholds: [0.5, 0.6, 0.7, 0.8, 0.9, 0.95, 0.98, 0.99]
+allowlist_threshold: 0.98       # a context is allowlisted if its FPR here is within the requirement
+
+read_filters:                   # workflow/read_filters.py, applied to both arms before extraction
+  primary_only: true
+  mapq_min: 20
+  softclip_max_bp: 300          # total soft-clipping per read
+  mean_q_below_higher_median: 1.0   # cutoff = the higher of the two arms' median read mean-Q, minus this

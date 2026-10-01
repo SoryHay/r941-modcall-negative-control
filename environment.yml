@@ -1,0 +1,14 @@
+# Versions used to produce the article's figures (tier 1) and per-read tables (tier 2).
+name: r941-modcall-negative-control
+channels: [conda-forge, bioconda]
+dependencies:
+  - python=3.12
+  - matplotlib=3.10.3
+  - numpy=1.26
+  - pyyaml
+  - scipy
+  - samtools=1.19.2
+  - minimap2=2.29
+  - ont-modkit=0.6.4
+# Basecalling (tier 2) ran in docker: Guppy 5.0.16 (genomicpariscentre/guppy-gpu) with the Rerio model
+# res_dna_r941_min_modbases-all-context_v001; Dorado 0.3.3 with NEMO_R9_6mA. See workflow/README.md.

@@ -1,0 +1,6 @@
+The tables in data/ and supplementary/ and the figure in supplementary/S6/ are licensed under the
+Creative Commons Attribution 4.0 International License (CC BY 4.0):
+https://creativecommons.org/licenses/by/4.0/
+
+The figures and Table 1 as published in the article are not distributed here; the scripts in figures/
+regenerate them locally from the tables in data/. Please cite the article given in README.md.
